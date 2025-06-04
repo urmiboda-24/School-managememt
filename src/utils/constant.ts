@@ -51,3 +51,46 @@ export const USER_HEADER_ITEMS = [
 
 export const LOG_IN_IMAGE_BANNER_LINK =
   "https://img.freepik.com/free-vector/sign-page-abstract-concept-illustration_335657-2242.jpg?semt=ais_hybrid&w=740";
+
+export const PAGINATION_OPTIONS = [
+  { value: 10, label: "10" },
+  { value: 20, label: "20" },
+  { value: 50, label: "50" },
+];
+export type Column<T> = {
+  header: string | React.ReactNode;
+  key: keyof T;
+  render?: (row: T) => React.ReactNode;
+  sortKey?: (row: T) => string | number;
+  isSortable?: boolean;
+};
+
+export type Action<T> = {
+  icon: React.ReactNode;
+  onClick: (row: T) => void;
+  tooltip?: string;
+  disabled?: (row: T) => boolean;
+};
+export type DataTable<T> = {
+  data: T[];
+  columns: Column<T>[];
+  actions?: Action<T>[];
+  loading?: boolean;
+  showSerialNumber?: boolean;
+};
+
+export interface IRequestType {
+  _id: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  status: string;
+  createdAt: string;
+  __v: number;
+}
+
+export interface IRequestResponse {
+  success: boolean;
+  data: IRequestType[];
+}

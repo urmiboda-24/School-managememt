@@ -9,3 +9,5 @@ export interface IRequestParams {
   withToken?: boolean; // optional flag
   isFormData?: boolean;
 }
+
+export type SortOrder = "asc" | "desc";

@@ -8,7 +8,7 @@ import {
   Home,
   GraduationCap,
 } from "lucide-react";
-import { cn } from "@/utils/helper";
+import { cn } from "@/lib/utils";
 import { ROUTES } from "@/utils/constant";
 import { usePathname, useRouter } from "next/navigation";
 
