@@ -6,22 +6,15 @@ import { Form, Formik, FormikHelpers } from "formik";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Cookie from "js-cookie";
-import {
-  API_ROUTES,
-  LOG_IN_IMAGE_BANNER_LINK,
-  ROLE,
-  ROUTES,
-} from "@/utils/constant";
-import { toast } from "react-toastify";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ROLE, ROUTES } from "@/utils/constant";
 import { InitialLogInValues } from "@/utils/helper/initialValues";
-import FormikTextField from "@/components/common/FormikTextField";
 import { LogInFormSchema } from "@/utils/helper/schema";
-import Image from "next/image";
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
-import CustomButton from "@/components/common/CustomButton";
-import Logo from "@/components/common/Logo";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/20/solid";
 import FormikSelectField from "@/components/common/FormikSelectField";
+import Logo from "@/components/common/Logo";
+import FormikTextField from "@/components/common/FormikTextField";
 
 const LogInPage = () => {
   const router = useRouter();
@@ -163,14 +156,14 @@ const LogInPage = () => {
                     </Link>
                   </div>
 
-                  <CustomButton
+                  <Button
                     type="submit"
-                    variant="primary"
+                    variant="default"
                     disabled={isSubmitting}
                     className="w-full py-3 transition-colors disabled:opacity-50"
                   >
                     {isSubmitting ? "Logging In..." : "Log In"}
-                  </CustomButton>
+                  </Button>
 
                   <p className="text-center text-sm text-gray-500 mt-4">
                     Don't have an account?{" "}

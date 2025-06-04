@@ -8,9 +8,9 @@ import {
   Home,
   GraduationCap,
 } from "lucide-react";
-import { cn } from "@/utils/helper";
 import { ROUTES } from "@/utils/constant";
 import { usePathname, useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 interface SidebarProps {
   isOpen: boolean;

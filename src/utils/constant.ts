@@ -51,3 +51,10 @@ export const USER_HEADER_ITEMS = [
 
 export const LOG_IN_IMAGE_BANNER_LINK =
   "https://img.freepik.com/free-vector/sign-page-abstract-concept-illustration_335657-2242.jpg?semt=ais_hybrid&w=740";
+
+export const DEFAULT_PAGINATION = {
+  page: 1,
+  pageSize: 10,
+  total: 0,
+  totalPages: 0,
+};
